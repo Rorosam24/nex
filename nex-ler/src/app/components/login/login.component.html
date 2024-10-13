@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <div class="p-grid p-align-center vh-100">
+    <div class="p-col-12">
+      <div class="p-d-flex p-jc-center p-ai-center h-100">
+        <div class="p-fluid form-container">
+          <h2 class="text-center p-mb-4">LOGIN</h2>
+          <div class="p-d-grid p-mb-3">
+            <!-- Google Sign-in Button -->
+            <button pButton label="Sign in with Google" icon="pi pi-google" class="p-button-danger p-mb-2 p-button-block"></button>
+            <!-- Apple Sign-in Button -->
+            <button pButton label="Sign in with Apple" icon="pi pi-apple" class="p-button-dark p-button-block"></button>
+          </div>
+          <p class="text-center">or If you have an account with us please login</p>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="p-field">
+              <span class="p-float-label">
+                <input id="email" pInputText type="email" placeholder=" " formControlName="email" (blur)="onBlur('email')">
+                <label for="email">Email Address</label>
+              </span>
+              <p-message severity="error" *ngIf="loginForm.get('email')!.touched && loginForm.get('email')!.invalid">
+                <small *ngIf="loginForm.get('email')!.errors?.['required']">Email is required.</small>
+                <small *ngIf="loginForm.get('email')!.errors?.['email']">Email is invalid.</small>
+              </p-message>
+            </div>
+            <div class="p-field">
+              <span class="p-float-label">
+                <input id="password" pInputText type="password" placeholder=" " formControlName="password" (blur)="onBlur('password')">
+                <label for="password">Password</label>
+              </span>
+              <p-message severity="error" *ngIf="loginForm.get('password')!.touched && loginForm.get('password')!.invalid">
+                <small *ngIf="loginForm.get('password')!.errors?.['required']">Password is required.</small>
+                <small *ngIf="loginForm.get('password')!.errors?.['minlength']">Password must be at least 6 characters long.</small>
+              </p-message>
+            </div>
+            <div class="p-d-grid">
+              <button pButton type="submit" label="Sign In" class="custom-signin-btn p-button-block" [disabled]="loginForm.invalid"></button>
+            </div>
+          </form>
+          <div class="text-center p-mt-3">
+           
+ <small>Don't have an account? <a routerLink="/register">Sign up</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+</body>
+</html>

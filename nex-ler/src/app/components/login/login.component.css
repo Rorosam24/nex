@@ -1,0 +1,110 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  small
+  {
+    color:grey;
+  }
+  
+  .vh-100 {
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .h-100 {
+    height: 100%; /* 100% height for container */
+  }
+  
+  .p-d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 450px; /* Increase max-width for larger form */
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 2rem; /* Larger text for the heading */
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .p-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    font-size: 1.2rem; /* Make buttons larger */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+   .pi {
+    margin-left: 20px; 
+    font-size: 30px;
+}
+  
+  .p-button-dark {
+    background-color: #611d6e;
+    border: none;
+  }
+  
+  .p-button-dark:hover {
+    background-color: #743081;
+  }
+  
+  .p-button-danger {
+    background-color: #000; /* Google button */
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .p-button-danger:hover {
+    background-color: #333;
+  }
+  
+  .custom-signin-btn {
+    background-color: #000; 
+    border-color: #333;
+    color: white;
+  }
+  .custom-signin-btn:hover{
+    background-color: #333; 
+    border-color: #333; 
+    color: white; }
+
+  .p-mb-4 {
+    margin-bottom: 2rem;
+  }
+  
+  .p-mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .p-mt-3 {
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px; /* Responsive padding for mobile */
+    }
+  }
+  
+  

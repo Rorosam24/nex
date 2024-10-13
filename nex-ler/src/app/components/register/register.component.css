@@ -1,0 +1,98 @@
+.register-container {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow: hidden; 
+}
+
+/* Background image styling */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ object-fit: cover;
+  z-index: -1; 
+}
+
+/* Card styling */
+.register-form {
+  position: relative; 
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+}
+
+.p-field {
+  margin-bottom: 1.5rem; 
+}
+
+
+/* Card styling */
+.p-card {
+  padding: 2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Input field styling */
+.p-field {
+  margin-bottom: 1.5rem; /* More space between inputs */
+}
+
+/* Labels and inputs */
+.p-field label {
+  display: block;
+  margin-bottom: 0.5rem; /* Space between label and input */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input[pInputText], input[pPassword] {
+  width: 100%;
+  padding: 0.75rem;  /* Increase padding for better readability */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error message styling */
+p-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+button[pButton] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #000; /* Set background color to black */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button[pButton]:hover {
+  background-color: #444; /* Darker shade for hover effect */
+}
+
+
+/* Already have an account text */
+.p-mt-3 {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+a {
+  color: #a13eb4; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

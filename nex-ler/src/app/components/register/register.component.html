@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-container">
+        <img src="WhatsApp Image 2024-10-03 at 00.02.34.jpeg" alt="Background Image" class="background-image" />
+        <p-card header="Create An Account">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            
+            <!-- First Name and Last Name in one row -->
+            <div class="p-fluid p-grid">
+              <div class="p-field p-col">
+                <label for="firstName">First Name</label>
+                <input type="text" pInputText formControlName="firstName" (blur)="onBlur('firstName')" placeholder="First name">
+                <p-message severity="error" *ngIf="registerForm.get('firstName')!.touched && registerForm.get('firstName')!.invalid">
+                  First name is required.
+                </p-message>
+              </div>
+      
+              <div class="p-field p-col">
+                <label for="lastName">Last Name</label>
+                <input type="text" pInputText formControlName="lastName" (blur)="onBlur('lastName')" placeholder="Last name">
+                <p-message severity="error" *ngIf="registerForm.get('lastName')!.touched && registerForm.get('lastName')!.invalid">
+                  Last name is required.
+                </p-message>
+              </div>
+            </div>
+      
+            <!-- Email Input -->
+            <div class="p-field">
+              <label for="email">Email</label>
+              <input type="email" pInputText formControlName="email" (blur)="onBlur('email')" placeholder="Email address">
+              <p-message severity="error" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.invalid">
+                <small *ngIf="registerForm.get('email')!.errors?.['required']">Email is required.</small>
+                <small *ngIf="registerForm.get('email')!.errors?.['email']">Email is invalid.</small>
+              </p-message>
+            </div>
+      
+            <!-- Password Input -->
+            <div class="p-field">
+              <label for="password">Password</label>
+              <input type="password" pPassword formControlName="password" (blur)="onBlur('password')" placeholder="Password">
+              <p-message severity="error" *ngIf="registerForm.get('password')!.touched && registerForm.get('password')!.invalid">
+                <small *ngIf="registerForm.get('password')!.errors?.['required']">Password is required.</small>
+                <small *ngIf="registerForm.get('password')!.errors?.['minlength']">Password must be at least 6 characters long.</small>
+              </p-message>
+            </div>
+      
+            <!-- Register Button -->
+            <div class="p-field">
+              <button type="submit" pButton label="Create an account" class="p-mt-2" [disabled]="registerForm.invalid"></button>
+            </div>
+      
+            <!-- Already have an account link -->
+            <div class="p-mt-3">
+              <small>Already have an account? <a routerLink="/login">Login</a></small>
+            </div>
+            
+          </form>
+        </p-card>
+      </div>
+      
+      
+</body>
+</html>
